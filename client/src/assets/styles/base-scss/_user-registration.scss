@@ -1,0 +1,594 @@
+// /* --------------- USER REGISTRATION CSS below ----------------------------------------------------- */
+.le_login-wrapper {
+    z-index: 9999;
+}
+
+div#confirm_popup {
+    z-index: 9999999;
+}
+
+.le_signleft-row {
+    background-image: url("/images/sign-Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    color: $clr-primary;
+    position: fixed;
+    left: 0;
+    top: 0;
+    .le_signleft-inner {
+        max-width: 480px;
+    }
+    .le_signleft-image {
+        background: #0f4c82;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+    .le_sign-box {
+        border-radius: 18px;
+    }
+    .le_signleft-heading {
+        font-family: 'montserratbold';
+        font-size: 40px;
+        color: #195d97;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .le_light-heading {
+        font-family: 'montserratlight';
+        color: #77a5cd;
+        font-size: 36px;
+        text-transform: initial;
+    }
+}
+
+.le_signright-row {
+    .le_signleft-inner {
+        max-width: 480px;
+    }
+    .le_joinus {
+        top: 0;
+        z-index: -1;
+    }
+    .le-joinus-text {
+        font-size: 10vw;
+        color: #ebebeb;
+    }
+    .le_signright-box {
+        width: 100%;
+        max-width: 460px;
+        box-shadow: 1px 2px 35px 9px #dbdbdbd4;
+        border-radius: 18px;
+    }
+    .le-form-title {
+        font-size: 24px;
+    }
+    .le_input-bg {
+        background: #f9f9f9;
+    }
+    .le_sign-in-form {
+        box-sizing: border-box;
+        input {
+            border-radius: 8px;
+        }
+        label {
+            color: #777;
+            font-weight: 300;
+        }
+        .le_check-rememeberMe {
+            top: 3px;
+        }
+        .le_eye-icon {
+            top: calc(50% - 7px);
+            right: 10px;
+        }
+        .pmd-checkbox-txt {
+            position: relative;
+            top: 2px;
+        }
+        .sign-in-btn {
+            text-transform: capitalize;
+            border-radius: 10px;
+            padding: 14px 50px;
+            margin: 0 auto;
+        }
+        .signin-opt-row {
+            max-width: 45px;
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            padding: 8px 10px;
+            border-radius: 4px;
+        }
+        .signin-opt-row {
+            transition: all .8s;
+            &:hover {
+                box-shadow: 0px 9px 17px 0px #dbdbdbd4;
+                border: 1px solid #f5f4f4;
+                -webkit-transform: scale(1.25);
+                -moz-transform: scale(1.25);
+                -ms-transform: scale(1.25);
+                -o-transform: scale(1.25);
+                transform: scale(1.25);
+            }
+        }
+        .le_signin-txt {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            &:before {
+                content: "";
+                width: 100%;
+                position: absolute;
+                height: 2px;
+                background: #e6e6e6;
+                left: 0;
+                top: 9px;
+                z-index: -1;
+            }
+        }
+        .le_signin-txt:after {
+            content: "";
+            position: absolute;
+            background: #ffffff;
+            left: calc(50% - 57px);
+            height: 21px;
+            z-index: -1;
+            width: 115px;
+        }
+        .pmd-checkbox [type=checkbox]:checked+.pmd-checkbox-label:before,
+        .pmd-checkbox [type=checkbox]:not(:checked)+.pmd-checkbox-label:before {
+            width: 14px;
+            height: 14px;
+            border-width: 2px;
+            border-style: solid;
+            box-sizing: border-box;
+            border-radius: 2px;
+            border-color: rgba(168, 168, 168, 0.54);
+        }
+        .pmd-checkbox [type=checkbox]:checked+.pmd-checkbox-label:after,
+        .pmd-checkbox [type=checkbox]:not(:checked)+.pmd-checkbox-label:after {
+            height: 10px;
+            box-sizing: border-box;
+            left: 4px;
+            top: 2px;
+            width: 6px;
+        }
+        .pmd-checkbox [type=checkbox]:checked+.pmd-checkbox-label,
+        .pmd-checkbox [type=checkbox]:not(:checked)+.pmd-checkbox-label {
+            padding-left: 16px;
+        }
+        .pmd-checkbox [type=checkbox]:checked+.pmd-checkbox-label:before {
+            border-color: rgba(0, 0, 0, .87) !important;
+        }
+        .form-group {
+            margin: 0;
+        }
+        .remove-form-group {
+            margin-bottom: 12px;
+        }
+        .le_check-rem {
+            box-sizing: border-box;
+            .pmd-checkbox-label {
+                position: relative;
+                padding-top: 2px;
+            }
+        }
+        #confirm_popup .modal-dialog.modal-md {
+            z-index: 9999 !important;
+        }
+    }
+}
+
+.le_girl-img {
+    max-width: 215px;
+    bottom: 0;
+    z-index: 1;
+    left: calc(50% - -164px);
+    min-width: 215px;
+}
+
+.le_typing {
+    width: 8ch;
+    animation: typing 5s infinite steps(9), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+}
+
+.le_button-form {
+    text-transform: capitalize;
+    border-radius: 10px;
+    padding: 14px 50px;
+    margin: 20px auto;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+@media (min-width: 991px) {
+    .le_signin-in-box {
+        min-width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .le_signin-in-box {
+        min-width: 460px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .le_signin-in-box {
+        min-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+// .user-login-wrapper {
+//     width: 100%;
+//     margin: 0;
+//     padding: 0;
+//     min-height: 100%;
+//     section {
+//         &.left-banner {
+//             width: 45%;
+//             background-image: url("/images/sign-up-banner.jpg");
+//             background-repeat: no-repeat;
+//             background-size: cover;
+//             padding: 40px 37px 0;
+//             color: $clr-primary;
+//             position: fixed;
+//             left: 0;
+//             top: 0;
+//             display: flex;
+//             align-items: center;
+//             height: 100%;
+//             min-height: 100vh;
+//             .logo {
+//                 position: absolute;
+//                 top: 40px;
+//                 cursor: pointer;
+//             }
+//             h3 {
+//                 font-family: 'montserratbold';
+//                 font-size: 33px;
+//                 color: $clr-primary;
+//                 margin: 0;
+//                 text-transform: uppercase;
+//                 &:first-of-type {
+//                     font-family: 'montserratlight';
+//                 }
+//             }
+//             p {
+//                 margin-top: 3vh;
+//                 font-size: 16px;
+//                 line-height: 1.73;
+//                 color: $clr-primary;
+//             }
+//         }
+//         &.right-section {
+//             position: relative;
+//             width: 55%;
+//             background-color: $clr-primary;
+//             padding: 40px 37px;
+//             display: flex;
+//             align-items: center;
+//             min-height: calc(100vh - 45px);
+//             .mobile-on-logo {
+//                 display: none;
+//                 position: absolute;
+//                 top: 40px;
+//             }
+//             .form-wrapper {
+//                 width: 32vw;
+//                 margin: 0 auto;
+//                 h4 {
+//                     font-size: 24px;
+//                     color: $clr-septenary;
+//                     margin: 0 0 30px;
+//                 }
+//                 h5 {
+//                     font-size: 18px;
+//                     color: $clr-quinary;
+//                     margin: 0 0 10px;
+//                     line-height: 1.71;
+//                 }
+//                 p {
+//                     font-size: 16px;
+//                     line-height: 1.71;
+//                     color: $clr-tertiary;
+//                     margin: 0;
+//                 }
+//             }
+//             .form-group {
+//                 margin: 0 0 25px;
+//                 line-height: 1;
+//             }
+//             form {
+//                 label {
+//                     font-family: 'open_sanssemibold';
+//                     font-size: 14px;
+//                     letter-spacing: 1px;
+//                     color: $clr-tertiary;
+//                     text-transform: uppercase;
+//                     margin: 0 0 10px;
+//                     font-weight: normal;
+//                 }
+//                 input {
+//                     @include prefix('border-radius',
+//                     0);
+//                     font-size: 14px;
+//                     color: $clr-quinary;
+//                     height: 40px;
+//                     border: solid 1px $clr-quaternary;
+//                     box-shadow: none;
+//                     padding: 10px 20px;
+//                     letter-spacing: 0;
+//                 }
+//             }
+//         }
+//     }
+// }
+// input {
+//     &#fname,
+//     &#lname {
+//         text-transform: capitalize;
+//     }
+// }
+// .user-login-wrapper section.right-section .checkbox {
+//     >label {
+//         font-family: 'open_sansregular';
+//         color: #aeaeae;
+//         font-weight: normal;
+//         text-transform: inherit;
+//         letter-spacing: 0;
+//         margin: 0 0 0 25px;
+//         line-height: 1.4;
+//     }
+//     input {
+//         height: 12px;
+//         padding: 4px 6px;
+//         border-color: $clr-di;
+//     }
+// }
+// .right-section {
+//     .form-wrapper .already-signed {
+//         font-size: 14px;
+//         color: #596377;
+//         text-align: center;
+//         display: block;
+//         position: absolute;
+//         left: 0;
+//         right: 0;
+//         bottom: 40px;
+//         a {
+//             font-size: 18px;
+//             color: $clr-secondary;
+//         }
+//     }
+//     .checkbox>label.pmd-checkbox>span {
+//         position: absolute !important;
+//         left: 0;
+//     }
+// }
+// .pmd-checkbox [type=checkbox]:checked+.pmd-checkbox-label::before {
+//     background-color: $clr-secondary;
+//     border: 1px solid $clr-secondary;
+// }
+// .pmd-checkbox [type=checkbox]:not(:checked)+.pmd-checkbox-label::before {
+//     @include prefix('border-radius',
+//     0);
+//     border: solid 1px $clr-quaternary;
+// }
+// .pmd-checkbox [type=checkbox]:checked+.pmd-checkbox-label::after,
+// .pmd-checkbox [type=checkbox]:not(:checked)+.pmd-checkbox-label::after {
+//     display: block !important;
+// }
+// /*------------------------- sign-in css begins below ---------------------------------------*/
+// input[type="password"],
+// input.pswd {
+//     padding: 10px 35px 10px 20px !important;
+// }
+// .user-login-wrapper section.right-section {
+//     .checkbox>a {
+//         float: right;
+//         color: $clr-secondary;
+//         font-size: 13px;
+//         line-height: 1.6;
+//     }
+//     .form-group i.fa.fa-question {
+//         position: absolute;
+//         top: 10px;
+//         right: 15px;
+//         color: $clr-octonary;
+//         font-size: 18px;
+//     }
+// }
+// .btns .or {
+//     margin: 28px auto 23px;
+//     background-color: $clr-quaternary;
+//     position: relative;
+//     height: 1px;
+//     width: 190px;
+//     font-size: 13px;
+//     color: #aeaeae;
+//     >span {
+//         position: absolute;
+//         background-color: $clr-primary;
+//         top: -10px;
+//         width: 30px;
+//         left: 42%;
+//     }
+// }
+// .pwd-wrapper {
+//     position: relative;
+//     span {
+//         &.eye {
+//             position: absolute;
+//             top: 0;
+//             right: 10px;
+//             font-size: 16px;
+//             color: $clr-tertiary;
+//             cursor: pointer;
+//             height: 40px;
+//             padding: 12px 0;
+//         }
+//         &.eye-slash {
+//             display: none;
+//             position: absolute;
+//             top: 12px;
+//             right: 10px;
+//             font-size: 16px;
+//             color: $clr-tertiary;
+//             cursor: pointer;
+//         }
+//     }
+// }
+// /*-------------------------- sign-in css above -------------------------------------*/
+// .reset-link-section .form-wrapper img {
+//     margin: 0 auto 4vh;
+// }
+// .reset-link-page-wrapper section.reset-link-section {
+//     padding: 0 37px;
+//     .form-wrapper {
+//         width: 40vw;
+//         margin: 0 auto;
+//         text-align: center;
+//     }
+// }
+// /* --------------- USER REGISTRATION CSS above ----------------------------------------------------- */
+// /*===============Responsive css below ( Non-Mobile First Method ) ======================*/
+// /* Small Devices, Tablets */
+// @media only screen and (max-width: 767px) {
+//     .user-login-wrapper {
+//         height: auto;
+//     }
+//     .user-login-wrapper section.left-banner {
+//         display: none;
+//     }
+//     .user-login-wrapper section.right-section,
+//     .user-login-wrapper section.right-section {
+//         width: 100%;
+//         padding: 17px 20px;
+//         flex-direction: column;
+//         align-items: center;
+//     }
+//     .user-login-wrapper section.right-section {
+//         min-height: 100%;
+//     }
+//     .user-login-wrapper section.right-section .form-wrapper {
+//         width: 100%;
+//         margin: 20px auto 0;
+//     }
+//     .user-login-wrapper section.right-section .mobile-on-logo {
+//         display: block;
+//         top: 17px;
+//     }
+//     .right-section .form-wrapper .already-signed {
+//         bottom: 20px;
+//     }
+//     .forgot-pwd-page-wrapper section.forgot-pwd-banner {
+//         display: none;
+//     }
+//     .forgot-pwd-page-wrapper section.forgot-pwd-section {
+//         width: 100%;
+//         padding: 17px 20px;
+//         flex-direction: column;
+//         align-items: center;
+//     }
+//     section.forgot-pwd-section .mobile-on-logo {
+//         display: block;
+//         position: absolute;
+//         top: 17px;
+//     }
+//     .white-logo-bg {
+//         background-color: $clr-primary;
+//         width: 100%;
+//     }
+//     .white-logo-bg .mobile-on-logo {
+//         position: static !important;
+//     }
+//     .forgot-pwd-page-wrapper section.forgot-pwd-section .form-wrapper {
+//         margin: 20px auto;
+//         width: 100%;
+//     }
+//     .reset-link-page-wrapper section.reset-link-banner {
+//         display: none;
+//     }
+//     .reset-link-page-wrapper section.reset-link-section {
+//         width: 100%;
+//         padding: 17px 20px;
+//         flex-direction: column;
+//         align-items: center;
+//     }
+//     .reset-link-page-wrapper section.reset-link-section .form-wrapper {
+//         width: 100%;
+//         margin: 50px auto 0;
+//     }
+//     section.reset-link-section .mobile-on-logo {
+//         display: block;
+//         position: absolute;
+//         top: 17px;
+//     }
+//     .reset-link-section .form-wrapper .already-signed {
+//         margin: 30px 0 0;
+//     }
+// }
+// /*------------------ max-width : 767px above --------*/
+// @media only screen and (max-width: 479px) {
+//     .forgot-pwd-page-wrapper section.forgot-pwd-section .form-wrapper {
+//         margin: 46px auto 0;
+//         width: 100%;
+//     }
+//     .sign-up-page-wrapper section.right-section {
+//         padding: 15px 20px;
+//     }
+//     .forgot-pwd-page-wrapper section.forgot-pwd-section {
+//         width: 100%;
+//         padding: 17px 20px;
+//     }
+//     .forgot-pwd-page-wrapper section.forgot-pwd-section {
+//         padding: 15px 20px;
+//         min-height: 100%
+//     }
+//     section.forgot-pwd-section .form-wrapper h4 {
+//         font-size: 18px;
+//         margin: 0 0 10px;
+//     }
+//     section.forgot-pwd-section .form-wrapper p {
+//         font-size: 12px;
+//         line-height: 1.42;
+//     }
+//     .reset-link-page-wrapper section.reset-link-banner {
+//         display: none;
+//     }
+//     .reset-link-page-wrapper section.reset-link-section {
+//         width: 100%;
+//     }
+//     .reset-link-page-wrapper section.reset-link-section {
+//         padding: 17px 20px;
+//     }
+//     .reset-link-section .form-wrapper img {
+//         margin: 0 auto 6vh;
+//     }
+//     section.reset-link-section .form-wrapper h5 {
+//         font-size: 14px;
+//     }
+//     section.reset-link-section .form-wrapper p {
+//         font-size: 12px;
+//     }
+// }
